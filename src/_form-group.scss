@@ -1,0 +1,56 @@
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    margin-bottom: 0.3rem;
+    color: $secondary;
+  }
+
+  &.form-floating {
+    border: 1px solid $secondary;
+    border-radius: 0.2rem;
+    position: relative;
+
+    .form-control {
+      border: none;
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        + label {
+          line-height: 0.7rem;
+          font-size: 0.75rem;
+          top: -0.6rem;
+        }
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    label {
+      @include position(absolute, $top: 0.2rem, $left: 0.3rem);
+      background-color: white;
+      transition: all 0.3s;
+      padding: 0 0.3rem;
+      cursor: text;
+      margin: 0;
+    }
+  }
+}
+
+.form-control {
+  padding: 0.2rem 0.3rem 0.22rem;
+  border: 1px solid $secondary;
+  border-radius: 0.2rem;
+  min-height: 1.2rem;
+  width: 100%;
+
+  &:focus {
+    outline-color: $secondary;
+  }
+
+  &::placeholder {
+    color: $secondary;
+  }
+}

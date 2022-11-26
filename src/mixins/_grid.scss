@@ -1,0 +1,46 @@
+@use "sass:math";
+
+@mixin make-grid-columns($size) {
+  .col#{$size} {
+    flex: 1 0 0%;
+  }
+
+  .row-cols#{$size}-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  @if $grid-row-columns > 0 {
+    @for $i from 1 through $grid-row-columns {
+      .row-cols#{$size}-#{$i} {
+        > * {
+          flex: 0 0 auto;
+          width: math.div(100%, $i);
+        }
+      }
+    }
+  }
+
+  .col#{$size}-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  @if $grid-columns > 0 {
+    @for $i from 1 through $grid-columns {
+      .col#{$size}-#{$i} {
+        flex: 0 0 auto;
+        width: calc(percentage(math.div($i, $grid-columns)) - 1.5rem);
+      }
+    }
+
+    @for $i from 0 through ($grid-columns - 1) {
+      @if not($size == "" and $i == 0) {
+        .offset#{$size}-#{$i} {
+          $num: math.div($i, $grid-columns);
+          margin-left: if($num == 0, 0, percentage($num));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@include make-margin(null);
+
+@each $size, $breakpoint in $breakpoints {
+  @include media-breakpoint($size) {
+    @include make-margin(-$size);
+  }
+}

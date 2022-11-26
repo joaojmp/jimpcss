@@ -1,0 +1,19 @@
+{
+  "name": "jimpcss",
+  "version": "1.0.0",
+  "description": "A small CSS package",
+  "scripts": {
+    "prod": "sass src/jimpcss.scss build/jimpcss.css --style compressed",
+    "dev": "sass src/jimpcss.scss build/jimpcss.css",
+    "watch": "nodemon -e scss -x \"npm run dev\""
+  },
+  "files": [
+    "build/"
+  ],
+  "author": "Jimp <joaojmp1997@hotmail.com> (https://jimps.com.br/)",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sass": "^1.56.1"
+  }
+}

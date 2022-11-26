@@ -1,0 +1,21 @@
+.row {
+  padding: 0.75rem;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+
+  & > * {
+    padding: 0.75rem;
+    max-width: 100%;
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
+
+@include make-grid-columns(null);
+
+@each $size, $breakpoint in $breakpoints {
+  @include media-breakpoint($size) {
+    @include make-grid-columns(-$size);
+  }
+}

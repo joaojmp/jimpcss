@@ -1,0 +1,7 @@
+@include make-text-align(null);
+
+@each $size, $breakpoint in $breakpoints {
+  @include media-breakpoint($size) {
+    @include make-text-align(-$size);
+  }
+}

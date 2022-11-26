@@ -1,0 +1,48 @@
+// Variables
+
+// Base colors
+$primary: #0d6efd !default;
+$secondary: #6c757d !default;
+$success: #198754 !default;
+$info: #0dcaf0 !default;
+$warning: #ffc107 !default;
+$danger: #dc3545 !default;
+$light: #f8f9fa !default;
+$dark: #212529 !default;
+
+// Body
+$body-bg: $light !default;
+$body-color: $dark !default;
+$body-font-family: "Roboto", sans-serif;
+
+// Breakpoints
+$breakpoints: (
+  xs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+) !default;
+
+// Grid
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+
+// Margin
+$margin-quantity: 5;
+$margin-size: 0.5rem;
+
+// Margin
+$padding-quantity: 5;
+$padding-size: 0.5rem;

@@ -1,0 +1,39 @@
+// Html
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// Body
+
+body {
+  font-family: $body-font-family;
+  background-color: $body-bg;
+  color: $body-color;
+  margin: 0;
+}
+
+// Links
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+  color: $primary;
+
+  &:hover {
+    color: darken($primary, 10%);
+    text-decoration: underline;
+  }
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  height: auto;
+}

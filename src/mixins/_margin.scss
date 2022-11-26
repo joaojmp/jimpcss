@@ -1,0 +1,63 @@
+@mixin make-margin($size) {
+  .m#{$size}-auto {
+    margin: auto;
+  }
+
+  .mt#{$size}-auto {
+    margin-top: auto;
+  }
+
+  .me#{$size}-auto {
+    margin-right: auto;
+  }
+
+  .mb#{$size}-auto {
+    margin-bottom: auto;
+  }
+
+  .ms#{$size}-auto {
+    margin-left: auto;
+  }
+
+  .mx#{$size}-auto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .my#{$size}-auto {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  @for $i from 1 through $margin-quantity {
+    .m#{$size}-#{$i} {
+      margin: calc($i * $margin-size);
+    }
+
+    .mt#{$size}-#{$i} {
+      margin-top: calc($i * $margin-size);
+    }
+
+    .me#{$size}-#{$i} {
+      margin-right: calc($i * $margin-size);
+    }
+
+    .mb#{$size}-#{$i} {
+      margin-bottom: calc($i * $margin-size);
+    }
+
+    .ms#{$size}-#{$i} {
+      margin-left: calc($i * $margin-size);
+    }
+
+    .mx#{$size}-#{$i} {
+      margin-right: calc($i * $margin-size);
+      margin-left: calc($i * $margin-size);
+    }
+
+    .my#{$size}-#{$i} {
+      margin-bottom: calc($i * $margin-size);
+      margin-top: calc($i * $margin-size);
+    }
+  }
+}

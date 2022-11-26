@@ -1,0 +1,17 @@
+@mixin make-text-align($size) {
+  .text#{$size}-start {
+    text-align: start;
+  }
+
+  .text#{$size}-center {
+    text-align: center;
+  }
+
+  .text#{$size}-end {
+    text-align: end;
+  }
+
+  .text#{$size}-justify {
+    text-align: justify;
+  }
+}

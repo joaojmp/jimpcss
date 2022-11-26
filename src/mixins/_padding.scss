@@ -1,0 +1,63 @@
+@mixin make-padding($size) {
+  .p#{$size}-auto {
+    padding: auto;
+  }
+
+  .pt#{$size}-auto {
+    padding-top: auto;
+  }
+
+  .pe#{$size}-auto {
+    padding-right: auto;
+  }
+
+  .pb#{$size}-auto {
+    padding-bottom: auto;
+  }
+
+  .ps#{$size}-auto {
+    padding-left: auto;
+  }
+
+  .px#{$size}-auto {
+    padding-right: auto;
+    padding-left: auto;
+  }
+
+  .py#{$size}-auto {
+    padding-bottom: auto;
+    padding-top: auto;
+  }
+
+  @for $i from 1 through $padding-quantity {
+    .p#{$size}-#{$i} {
+      padding: calc($i * $padding-size);
+    }
+
+    .pt#{$size}-#{$i} {
+      padding-top: calc($i * $padding-size);
+    }
+
+    .pe#{$size}-#{$i} {
+      padding-right: calc($i * $padding-size);
+    }
+
+    .pb#{$size}-#{$i} {
+      padding-bottom: calc($i * $padding-size);
+    }
+
+    .ps#{$size}-#{$i} {
+      padding-left: calc($i * $padding-size);
+    }
+
+    .px#{$size}-#{$i} {
+      padding-right: calc($i * $padding-size);
+      padding-left: calc($i * $padding-size);
+    }
+
+    .py#{$size}-#{$i} {
+      padding-bottom: calc($i * $padding-size);
+      padding-top: calc($i * $padding-size);
+    }
+  }
+}

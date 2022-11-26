@@ -1,0 +1,24 @@
+.container {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  width: 100%;
+
+  @each $size, $breakpoint in $container-max-widths {
+    @include media-breakpoint($size) {
+      max-width: $breakpoint;
+    }
+  }
+
+  &-fluid {
+    max-width: 100%;
+  }
+
+  @each $size, $breakpoint in $container-max-widths {
+    &-#{$size} {
+      max-width: $breakpoint;
+    }
+  }
+}
