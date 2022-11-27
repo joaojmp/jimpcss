@@ -1,6 +1,6 @@
 {
   "name": "jimpcss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small CSS package",
   "scripts": {
     "prod": "sass src/jimpcss.scss build/jimpcss.css --style compressed",
@@ -11,7 +11,7 @@
     "build/"
   ],
   "author": "Jimp <joaojmp1997@hotmail.com> (https://jimps.com.br/)",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "nodemon": "^2.0.20",
     "sass": "^1.56.1"
