@@ -8,7 +8,8 @@
     "prod": "sass --style=compressed src/jimpcss.scss:build/jimpcss.min.css"
   },
   "files": [
-    "build/"
+    "build/",
+    "examples/"
   ],
   "author": "Jimp <joaojmp1997@hotmail.com> (https://jimps.com.br/)",
   "license": "BSD-3-Clause",
