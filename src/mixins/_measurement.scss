@@ -1,0 +1,19 @@
+@mixin make-measurement($size) {
+  .w#{$size}-auto {
+    width: auto;
+  }
+
+  .h#{$size}-auto {
+    height: auto;
+  }
+
+  @each $measurement in $measurements {
+    .w#{$size}-#{$measurement} {
+      width: #{$measurement} + "%";
+    }
+
+    .h#{$size}-#{$measurement} {
+      height: #{$measurement} + "%";
+    }
+  }
+}

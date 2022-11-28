@@ -1,9 +1,0 @@
-@mixin media-breakpoint($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-    }
-  } @else {
-    @warn "Infelizmente, nenhum valor pode ser recuperado de `#{$breakpoint}`. " + "Os pontos de interrupção disponíveis são: #{map-keys($breakpoints)}.";
-  }
-}

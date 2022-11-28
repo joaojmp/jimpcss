@@ -1,0 +1,50 @@
+.btn {
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 0.2rem;
+  padding: 0.2rem 1rem;
+  transition: all 0.3s;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @each $name, $color in $colors {
+    $text: white;
+
+    @if $name == "warning" {
+      $text: $dark;
+    } @else if $name == "info" {
+      $text: $dark;
+    } @else if $name == "light" {
+      $text: $dark;
+    }
+
+    &-#{$name} {
+      background-color: $color;
+      border-color: $color;
+      color: $text;
+
+      &:hover {
+        $bg: white;
+        @if $name == "light" {
+          $bg: $dark;
+        }
+        background-color: $bg;
+        color: $color;
+      }
+    }
+
+    &-outline-#{$name} {
+      border-color: $color;
+      color: $color;
+
+      &:hover {
+        background-color: $color;
+        color: $text;
+      }
+    }
+  }
+}

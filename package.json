@@ -3,9 +3,9 @@
   "version": "1.0.2",
   "description": "A small CSS package",
   "scripts": {
-    "prod": "sass src/jimpcss.scss build/jimpcss.css --style compressed",
-    "dev": "sass src/jimpcss.scss build/jimpcss.css",
-    "watch": "nodemon -e scss -x \"npm run dev\""
+    "dev": "sass src/jimpcss.scss:build/jimpcss.css",
+    "watch": "sass --watch --update src/jimpcss.scss:build/jimpcss.css",
+    "prod": "sass --style=compressed src/jimpcss.scss:build/jimpcss.min.css"
   },
   "files": [
     "build/"
@@ -13,7 +13,6 @@
   "author": "Jimp <joaojmp1997@hotmail.com> (https://jimps.com.br/)",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "nodemon": "^2.0.20",
     "sass": "^1.56.1"
   }
 }

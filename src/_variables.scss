@@ -10,6 +10,17 @@ $danger: #dc3545 !default;
 $light: #f8f9fa !default;
 $dark: #212529 !default;
 
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+) !default;
+
 // Body
 $body-bg: $light !default;
 $body-color: $dark !default;
@@ -46,3 +57,7 @@ $margin-size: 0.5rem;
 // Margin
 $padding-quantity: 5;
 $padding-size: 0.5rem;
+
+// Measurements
+
+$measurements: (25, 50, 75, 100) !default;

@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -29,11 +30,4 @@ a {
     color: darken($primary, 10%);
     text-decoration: underline;
   }
-}
-
-// Images
-
-img {
-  max-width: 100%;
-  height: auto;
 }

@@ -22,6 +22,7 @@
   }
 
   .col#{$size}-auto {
+    display: inline-flex;
     flex: 0 0 auto;
     width: auto;
   }
@@ -29,8 +30,9 @@
   @if $grid-columns > 0 {
     @for $i from 1 through $grid-columns {
       .col#{$size}-#{$i} {
-        flex: 0 0 auto;
         width: calc(percentage(math.div($i, $grid-columns)) - 1.5rem);
+        display: inline-flex;
+        flex: 0 0 auto;
       }
     }
 

@@ -1,6 +1,8 @@
 @import "variables";
 
-@import "mixins/mixin.scss";
+@import "mixins/mixins";
+
+@import "functions/functions";
 
 @import "root";
 @import "containers";
@@ -8,4 +10,8 @@
 @import "margin";
 @import "padding";
 @import "text-align";
+@import "colors";
+@import "buttons";
 @import "form-group";
+@import "measurements";
+@import "alignment";
